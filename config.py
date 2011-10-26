@@ -9,8 +9,9 @@ port = "8080"
 stream = "yes"
 loc = "[48.857,2.352,1,1]"
 meta = "yes"
+window = "1000"
 
-teleportd_url ="{0}:{1}/search?apikey={2}&stream={3}&loc={4}&meta={5}".format(base_url,port,apikey,stream,loc,meta)
+teleportd_url ="{0}:{1}/search?apikey={2}&stream={3}&loc={4}&meta={5}&window={6}".format(base_url,port,apikey,stream,loc,meta,window)
 
 
 data_file = "output_stream"
