@@ -7,5 +7,6 @@ from config import *
 
 
 td_client = Client()
+
 td_client.connect(teleportd_url)
 
