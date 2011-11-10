@@ -62,7 +62,7 @@ class Client:
         if data.endswith("\r\n") and self.buffer.strip(): 
             content = json.loads(self.buffer,object_hook=_decode_dict)
             self.buffer = ""
-            append_to_csv([content["loc"][0],content["loc"][1],content["date"],content["thumb"],content["user"]["twitter"],content["qidx"]["tags"]],data_file)
+            append_to_csv([content["loc"][0],content["loc"][1],content["date"],content["thumb"],content["qidx"]["usrs"],content["qidx"]["tags"]],data_file)
 
     def reconnect(self,url):
         time.sleep(min(2^(self.attempts),MAX_SLEEP))
